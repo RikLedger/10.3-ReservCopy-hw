@@ -49,7 +49,34 @@ touch test
 ```shell
 rsync -a --progress . /tmp/backup
 ```
+*удаляем файл test*
+```shell
+rm -rf test
+```
+*произведем синхронизацию*
+```shell
+rsync -a --progress . /tmp/backup
+```
+*смотрим что получилось*
+```shell
+ll /tmp/backup | grep test
+```
 
+*делаем заркальную  полную копию*
+```shell
+rsync -a --progress --delete . /tmp/backup
+```
+*копируем на удалённый сервер*
+```shell
+rsync -a --progress .bash_history root@10.0.2.15:/tmp
+```
+*настройка синхронизации по ssh*
+```shell
+ssh-keygen -t rsa
+```
+```shell
+ssh-copy-id root@10.0.2.15
+```
 ![1-1](./10.3-1-001.jpg)
 
 ---
