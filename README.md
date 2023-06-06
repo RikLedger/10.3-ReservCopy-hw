@@ -129,6 +129,6 @@ crontab -e
 ```
 *добавляем команду для выполнения по расписанию*
 ```shell
-0 * * * * /usr/local/bin/cron_local_backup.sh
+* 0 * * * /usr/local/bin/cron_backup.sh
 ```
 ---
