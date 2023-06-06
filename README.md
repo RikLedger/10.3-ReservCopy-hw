@@ -96,9 +96,12 @@ rsync -a --progress --delete . /tmp/backup
 ```
 *исключаем из синхронизации скрытые файлы*
 ```shell
-rsync -a --exclude '*.**' . /tmp/backup
+rsync -a --exclude '.*' . /tmp/backup
 ```
-
+*проверяем хэш-сумму используя параметр "-с"*
+```shell
+rsync -ac --progress --delete . /tmp/backup
+```
 ![1-1](./10.3-1-001.jpg)
 
 ---
