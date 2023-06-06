@@ -131,4 +131,6 @@ crontab -e
 ```shell
 * 0 * * * /usr/local/bin/cron_backup.sh
 ```
+*файл cron и резултаты проверки*
+![2-1](./10.3-2-001.jpg)
 ---
